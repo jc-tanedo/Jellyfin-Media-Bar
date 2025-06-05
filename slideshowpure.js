@@ -879,7 +879,7 @@ const SlideCreator = {
     const playButton = this.createPlayButton(itemId);
     const detailButton = this.createDetailButton(itemId);
     const favoriteButton = this.createFavoriteButton(item);
-    buttonContainer.append(detailButton, playButton, favoriteButton);
+    buttonContainer.append(playButton, detailButton, favoriteButton);
 
     slide.append(
       logoContainer,

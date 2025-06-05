@@ -392,11 +392,13 @@
   gap: 6px;
   -webkit-tap-highlight-color: #fff0;
   border-radius: 40px;
+  min-width: 240px;
+  margin-right: 12px !important
 }
 
 .detail-button {
   font-size: 18px;
-  color: rgb(0, 0, 0);
+  color: white;
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -404,11 +406,12 @@
   cursor: pointer;
   transition: color 0.2s;
   -webkit-tap-highlight-color: #fff0;
+  background: transparent;
 }
 
 .favorite-button {
   font-size: 18px;
-  color: red;
+  color: white;
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -416,6 +419,7 @@
   cursor: pointer;
   transition: color 0.2s;
   -webkit-tap-highlight-color: #fff0;
+  background-color: transparent;
 }
 
 .favorite-button.favorited {
@@ -446,11 +450,21 @@
 .detail-button::before,
 .favorite-button::before,
 .favorite-button.favorited::before {
-  font-weight: 600;
   display: inline-block;
-  font-size: 22px;
   color: inherit;
   vertical-align: middle;
+}
+
+.detail-button::before,
+.favorite-button::before,
+.favorite-button.favorited::before {
+  font-weight: 400;
+  font-size: 32px;
+}
+
+.play-button::before {
+  font-weight: 600;
+  font-size: 22px;
 }
 
 .play-button:hover,
