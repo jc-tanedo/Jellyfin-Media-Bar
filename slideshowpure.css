@@ -6,7 +6,7 @@
 
 .backdrop.animate {
   animation: frostedGlass 1.2s cubic-bezier(0.4, 0, 0.2, 1),
-    kenBurnsZoomIn 10s ease-out forwards;
+    kenBurnsZoomIn 30s ease-out forwards;
 }
 
 .logo.animate {
@@ -31,7 +31,7 @@
   }
 
   to {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 }
 
