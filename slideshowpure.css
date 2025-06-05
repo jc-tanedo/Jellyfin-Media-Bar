@@ -354,7 +354,7 @@
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  max-width: 50%;
+  max-width: 40%;
 }
 
 .genre {
