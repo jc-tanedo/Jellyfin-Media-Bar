@@ -539,8 +539,23 @@ const ApiUtils = {
 
       console.log("Fetching random items from server...");
 
+      const seachParams = new URLSearchParams({
+        IncludeItemTypes: "Movie,Series",
+        Recursive: "true",
+        hasOverview: "true",
+        imageTypes: "Logo,Backdrop",
+        minCriticRating: "60.0",
+        minCommunityRating: "6.0",
+        sortBy: "PremiereDate",
+        sortOrder: "Descending",
+        isPlayed: "False",
+        enableUserData: "true",
+        Limit: CONFIG.maxItems,
+        fields: "Id",
+      });
+
       const response = await fetch(
-        `${STATE.jellyfinData.serverAddress}/Items?IncludeItemTypes=Movie,Series&Recursive=true&hasOverview=true&imageTypes=Logo,Backdrop&sortBy=Random&isPlayed=False&enableUserData=true&Limit=${CONFIG.maxItems}&fields=Id`,
+        `${STATE.jellyfinData.serverAddress}/Items?${seachParams.toString()}`,
         {
           headers: this.getAuthHeaders(),
         }
